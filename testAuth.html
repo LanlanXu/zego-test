@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    navigator.mediaDevices.getUserMedia({ video: true, audio: true })
+      .then(async stream => {
+        alert('授权成功')
+      })
+      .catch(error => {
+        console.warn(error);
+        // 处理错误，比如用户拒绝了权限请求
+        alert('授权失败')
+      });
+  </script>
+</body>
+
+</html>
